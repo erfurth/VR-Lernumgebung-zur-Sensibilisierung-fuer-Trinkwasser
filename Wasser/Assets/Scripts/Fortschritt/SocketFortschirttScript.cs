@@ -8,7 +8,7 @@ public class SocketFortschirttScript : MonoBehaviour
 public GameObject correctObject; // Objekt
     private XRSocketInteractor socketInteractor;
 
-    private int Fortschritt = 0;
+    public PunktezaehlerScript Punktezaehler;
     private void Awake() //aufgerufen, bevor das Spielt gestartet wird
     {
         socketInteractor = GetComponent<XRSocketInteractor>();
@@ -24,8 +24,7 @@ public GameObject correctObject; // Objekt
         if (grabInteractable != null && grabInteractable.gameObject == correctObject)
         {
             // Das korrekte Objekt wurde in den Socket gelegt
-            Fortschritt++;
-            Debug.Log("Fortschritt++. Fortschritt = " + Fortschritt);
+            Punktezaehler.PunkteHochzaehlen();
         }     
     }
     public void OnObjectExited(SelectExitEventArgs args)
@@ -34,8 +33,7 @@ public GameObject correctObject; // Objekt
         if (grabInteractable != null && grabInteractable.gameObject == correctObject)
         {
             // Das korrekte Objekt wurde aus dem Socket entfernt
-            Fortschritt--;
-            Debug.Log("Fortschritt--. Fortschritt = " + Fortschritt);
+            Punktezaehler.PunkteRunterzaehlen();
         }
     }
 }
