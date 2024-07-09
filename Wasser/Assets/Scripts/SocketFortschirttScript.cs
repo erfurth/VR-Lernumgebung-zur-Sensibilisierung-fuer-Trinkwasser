@@ -5,8 +5,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketFortschirttScript : MonoBehaviour
 {
-    public GameObject correctObject; // Objekt
+public GameObject correctObject; // Objekt
     private XRSocketInteractor socketInteractor;
+
+    private int Fortschritt = 0;
     private void Awake() //aufgerufen, bevor das Spielt gestartet wird
     {
         socketInteractor = GetComponent<XRSocketInteractor>();
@@ -16,28 +18,24 @@ public class SocketFortschirttScript : MonoBehaviour
         }
     }
 
-    public void OnObjectEntered(XRBaseInteractable interactable)
-    {
-        XRGrabInteractable grabInteractable = interactable as XRGrabInteractable;
+    public void OnObjectEntered(SelectEnterEventArgs args)
+    {   
+        XRGrabInteractable grabInteractable = args.interactableObject as XRGrabInteractable;
         if (grabInteractable != null && grabInteractable.gameObject == correctObject)
         {
             // Das korrekte Objekt wurde in den Socket gelegt
-            Debug.Log("Das korrekte Objekt wurde in den Socket gelegt");
-            AnimationScript animationScript = grabInteractable.gameObject.GetComponent<AnimationScript>();
-            Debug.Log("Checker: spielt ab!");
-            animationScript.Abspielen();
-        }
+            Fortschritt++;
+            Debug.Log("Fortschritt++. Fortschritt = " + Fortschritt);
+        }     
     }
-    public void OnObjectExited(XRBaseInteractable interactable)
+    public void OnObjectExited(SelectExitEventArgs args)
     {
-        XRGrabInteractable grabInteractable = interactable as XRGrabInteractable;
+        XRGrabInteractable grabInteractable = args.interactableObject as XRGrabInteractable;
         if (grabInteractable != null && grabInteractable.gameObject == correctObject)
         {
             // Das korrekte Objekt wurde aus dem Socket entfernt
-            Debug.Log("Das korrekte Objekt wurde aus dem Socket entfernt");
-            AnimationScript animationScript = grabInteractable.gameObject.GetComponent<AnimationScript>();
-            Debug.Log("Checker: spielt nicht mehr ab!");
-            animationScript.Abspielen(); // Stoppt die Animation
+            Fortschritt--;
+            Debug.Log("Fortschritt--. Fortschritt = " + Fortschritt);
         }
     }
 }

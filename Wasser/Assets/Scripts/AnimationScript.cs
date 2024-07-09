@@ -24,16 +24,16 @@ public class AnimationScript : MonoBehaviour
 
     public void Abspielen()
     {     
-        Debug.Log("Abspielen()");
+        //Debug.Log("Abspielen()");
         if (activated == false) {
             animator.SetTrigger("On");
             activated = true;
-            Debug.Log("Trigger on");
+            //Debug.Log("Trigger on");
         }
         else {
             animator.SetTrigger("Off");
             activated = false;
-            Debug.Log("Trigger off");
+            //Debug.Log("Trigger off");
         }
 
     }

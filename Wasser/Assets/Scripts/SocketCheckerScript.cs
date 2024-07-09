@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketChecker : MonoBehaviour
 {
-    public GameObject correctObject; // Objekt
+    public GameObject correctObject; // Gewünschtes Objekt
     private XRSocketInteractor socketInteractor;
     private void Awake() //aufgerufen, bevor das Spielt gestartet wird
     {
@@ -21,10 +21,9 @@ public class SocketChecker : MonoBehaviour
         XRGrabInteractable grabInteractable = args.interactableObject as XRGrabInteractable;
         if (grabInteractable != null && grabInteractable.gameObject == correctObject)
         {
-            // Das korrekte Objekt wurde in den Socket gelegt
-            Debug.Log("Das korrekte Objekt wurde in den Socket gelegt");
+            //Debug.Log("Das korrekte Objekt wurde in den Socket gelegt");
             AnimationScript animationScript = grabInteractable.gameObject.GetComponent<AnimationScript>();
-            Debug.Log("Checker: spielt ab!");
+            //Debug.Log("Checker: spielt ab!");
             animationScript.Abspielen();
         }     
     }
@@ -33,10 +32,9 @@ public class SocketChecker : MonoBehaviour
         XRGrabInteractable grabInteractable = args.interactableObject as XRGrabInteractable;
         if (grabInteractable != null && grabInteractable.gameObject == correctObject)
         {
-            // Das korrekte Objekt wurde aus dem Socket entfernt
-            Debug.Log("Das korrekte Objekt wurde aus dem Socket entfernt");
+            //Debug.Log("Das korrekte Objekt wurde aus dem Socket entfernt");
             AnimationScript animationScript = grabInteractable.gameObject.GetComponent<AnimationScript>();
-            Debug.Log("Checker: spielt nicht mehr ab!");
+            //Debug.Log("Checker: spielt nicht mehr ab!");
             animationScript.Abspielen(); // Stoppt die Animation
         }
     }
