@@ -6,7 +6,7 @@ using UnityEngine;
 public class AnimationScript : MonoBehaviour
 {
     
-    private Animator animator;
+    public Animator animator;
     private bool activated = false;
 
     // Start is called before the first frame update
@@ -24,15 +24,19 @@ public class AnimationScript : MonoBehaviour
 
     public void Abspielen()
     {     
+        Debug.Log("Abspielen()");
         if (activated == false) {
             animator.SetTrigger("On");
             activated = true;
-            // Debug.Log("spielt ab!");
+            Debug.Log("Trigger on");
         }
         else {
             animator.SetTrigger("Off");
             activated = false;
+            Debug.Log("Trigger off");
         }
 
     }
 }
+
+
