@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f4cda2b56db99324ba67dc7257323ecd
+guid: 5b698cec986452a42ac7dbd840a8905d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature_Verdunstung|verdunstung
-      takeName: Armature_Verdunstung|verdunstung
-      internalID: 7144862509061636209
+      name: Armature_Kondensation|kondensation
+      takeName: Armature_Kondensation|kondensation
+      internalID: -4379053567682355807
       firstFrame: 0
-      lastFrame: 49
+      lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
