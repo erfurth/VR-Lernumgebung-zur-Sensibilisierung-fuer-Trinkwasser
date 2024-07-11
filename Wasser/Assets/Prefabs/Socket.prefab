@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8554957919359924947}
   - component: {fileID: 2491451708913898793}
   - component: {fileID: 8016202814440913463}
+  - component: {fileID: 5290956818951915402}
   m_Layer: 0
   m_Name: Socket
   m_TagString: Untagged
@@ -86,10 +87,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5290956818951915402}
+        m_TargetAssemblyTypeName: SocketOffScript, Assembly-CSharp
+        m_MethodName: SocketInvisible
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5290956818951915402}
+        m_TargetAssemblyTypeName: SocketOffScript, Assembly-CSharp
+        m_MethodName: SocketVisible
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_OnHoverEntered:
@@ -110,6 +135,19 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &5290956818951915402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2216712654323923915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d71e38482170ff4b8c129d38801cc8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invisibleMaterial: {fileID: 2100000, guid: 64ad5e2ecd7eb084098f308110d58b32, type: 2}
 --- !u!1001 &1058521664797597840
 PrefabInstance:
   m_ObjectHideFlags: 0
