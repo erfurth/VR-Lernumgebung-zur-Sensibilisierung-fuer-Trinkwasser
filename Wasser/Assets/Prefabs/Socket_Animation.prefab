@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 8324206406772699195}
   - component: {fileID: 8487664998150569026}
   - component: {fileID: 3377089788268120497}
-  - component: {fileID: 7394871720910019318}
-  - component: {fileID: 8406024979688684962}
-  - component: {fileID: 4909596285466343204}
+  - component: {fileID: 5828453029711323556}
   m_Layer: 0
   m_Name: Socket_Animation
   m_TagString: Untagged
@@ -90,32 +88,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7394871720910019318}
-        m_TargetAssemblyTypeName: SocketChecker, Assembly-CSharp
-        m_MethodName: OnObjectEntered
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4909596285466343204}
-        m_TargetAssemblyTypeName: SocketTurnInvisibleScript, Assembly-CSharp
-        m_MethodName: OnObjectEntered
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8406024979688684962}
-        m_TargetAssemblyTypeName: SocketFortschirttScript, Assembly-CSharp
+      - m_Target: {fileID: 5828453029711323556}
+        m_TargetAssemblyTypeName: SocketInteractibleAcceptorScript, Assembly-CSharp
         m_MethodName: OnObjectEntered
         m_Mode: 0
         m_Arguments:
@@ -129,32 +103,8 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7394871720910019318}
-        m_TargetAssemblyTypeName: SocketChecker, Assembly-CSharp
-        m_MethodName: OnObjectExited
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4909596285466343204}
-        m_TargetAssemblyTypeName: SocketTurnInvisibleScript, Assembly-CSharp
-        m_MethodName: OnObjectExited
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8406024979688684962}
-        m_TargetAssemblyTypeName: SocketFortschirttScript, Assembly-CSharp
+      - m_Target: {fileID: 5828453029711323556}
+        m_TargetAssemblyTypeName: SocketInteractibleAcceptorScript, Assembly-CSharp
         m_MethodName: OnObjectExited
         m_Mode: 0
         m_Arguments:
@@ -185,7 +135,7 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
---- !u!114 &7394871720910019318
+--- !u!114 &5828453029711323556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,37 +144,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5468748972089545721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8c102dbcb243a843acf7a66843ec41f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b8205b589fd1c841bf7b4ef8c66d203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctObject: {fileID: 0}
---- !u!114 &8406024979688684962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468748972089545721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e56d37bc6d4aa4ebc2436477d51001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctObject: {fileID: 0}
-  Punktezaehler: {fileID: 0}
---- !u!114 &4909596285466343204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468748972089545721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d71e38482170ff4b8c129d38801cc8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renderer: {fileID: 5599464972728275359}
+  SocketRenderer: {fileID: 5599464972728275359}
 --- !u!1001 &180726112475930559
 PrefabInstance:
   m_ObjectHideFlags: 0
