@@ -17,7 +17,7 @@ public class InteractableScript : MonoBehaviour
 
     public Toggle Toggle;
 
-    private bool isSocketed = false;
+    private bool isCorrectSocketed = false;
     private Vector3 initialPosition;
     private Quaternion initialRotation;
     private Vector3 initialScale;
@@ -45,7 +45,7 @@ public class InteractableScript : MonoBehaviour
     public void EnterSocket(SocketInteractibleAcceptorScript socketInteractible, SelectEnterEventArgs args) {
         if (socketInteractible.gameObject == this.CorrectSocket) {
             Debug.Log("Entered correct Socket", this.gameObject);
-            this.isSocketed = true;
+            this.isCorrectSocketed = true;
 
             this.PlayAnimation();
             this.ShowAssociatedGameObjects();
@@ -61,11 +61,15 @@ public class InteractableScript : MonoBehaviour
 
     public void ExitSocket(SocketInteractibleAcceptorScript socketInteractible, SelectExitEventArgs args) {
         Debug.Log("Left Socket", this.gameObject);
-        this.isSocketed = false;
+        bool wasInCorrectSocket = this.isCorrectSocketed;
         this.HideAssociatedGameObjects();
         this.StopAnimation();
+        this.isCorrectSocketed = false;
         socketInteractible.ShowSocket();
+        if (wasInCorrectSocket) {
         PunktezaehlerScript.Instance.PunkteRunterzaehlen();
+        }
+        
 
         StartCoroutine("reactivateSocket");
     }
@@ -84,7 +88,7 @@ public class InteractableScript : MonoBehaviour
 
     public void ShowAssociatedGameObjects(){
         if (Toggle.isOn){
-            if (this.isSocketed) {
+            if (this.isCorrectSocketed) {
                 for (int i = 0; i < this.AssociatedGameObjects.Length; i++)
                 {
                     this.AssociatedGameObjects[i].SetActive(true);

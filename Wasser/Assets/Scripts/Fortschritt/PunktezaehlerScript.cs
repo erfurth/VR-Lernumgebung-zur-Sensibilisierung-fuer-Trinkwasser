@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using TMPro;
 
 public class PunktezaehlerScript : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PunktezaehlerScript : MonoBehaviour
     public Material onMaterial;
     public Material offMaterial;
     public GameObject[] Anzeigekugeln;
+
+    public TextMeshProUGUI AnzeigeText;
 
 
     void Awake() {
@@ -46,6 +49,8 @@ public class PunktezaehlerScript : MonoBehaviour
                 r.sharedMaterial = offMaterial;
             }
         }
+
+        AnzeigeText.text = "Elemente: " + punktestand.ToString() + "/" + Anzeigekugeln.Length.ToString();
     }
 
     public void PunkteRunterzaehlen(){
@@ -62,6 +67,8 @@ public class PunktezaehlerScript : MonoBehaviour
                 r.sharedMaterial = offMaterial;
             }
         }
+
+        AnzeigeText.text = "Elemente: " + punktestand.ToString() + "/" + Anzeigekugeln.Length.ToString();
     }
 
 }
