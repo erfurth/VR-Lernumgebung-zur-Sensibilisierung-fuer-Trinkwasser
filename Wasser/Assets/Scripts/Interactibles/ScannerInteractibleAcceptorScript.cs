@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ScannerInteractibleAcceptorScript : MonoBehaviour
 {
+    public MeshRenderer SocketRenderer;
     public TextMeshProUGUI Text;
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class ScannerInteractibleAcceptorScript : MonoBehaviour
             Debug.Assert(interactable != null, "ScannerSocket got non-interactable gameobject", interactable);
 
             this.Text.text = interactable.Text;
+            this.HideSocket();
         }
     }
 
@@ -37,6 +39,15 @@ public class ScannerInteractibleAcceptorScript : MonoBehaviour
             Debug.Assert(interactable != null, "ScannerSocket left non-interactable gameobject", interactable);
 
             this.Text.text = "";
+            this.ShowSocket();
         }
+    }
+
+    public void HideSocket() {
+        this.SocketRenderer.enabled = false;
+    }
+
+    public void ShowSocket() {
+        this.SocketRenderer.enabled = true;
     }
 }

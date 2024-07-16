@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using TMPro;
+using System.Diagnostics.CodeAnalysis;
 
 public class PunktezaehlerScript : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PunktezaehlerScript : MonoBehaviour
 
     public TextMeshProUGUI AnzeigeText;
 
+    public GewonnenScript GewonnenScript;
 
     void Awake() {
         Debug.Assert(Instance == null, "Punktezaehler already created");
@@ -24,20 +26,10 @@ public class PunktezaehlerScript : MonoBehaviour
         Instance = this;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void PunkteHochzaehlen(){
         punktestand++;
         Debug.Log("Punktestand: " + punktestand);
+        
         for (int i = 0; i < Anzeigekugeln.Length; i++)
         {
             Renderer r = Anzeigekugeln[i].GetComponent<Renderer>();
@@ -48,6 +40,10 @@ public class PunktezaehlerScript : MonoBehaviour
             else {
                 r.sharedMaterial = offMaterial;
             }
+        }
+
+        if (punktestand == Anzeigekugeln.Length) {
+            GewonnenScript.GewinnStatusErreicht();
         }
 
         AnzeigeText.text = "Elemente: " + punktestand.ToString() + "/" + Anzeigekugeln.Length.ToString();

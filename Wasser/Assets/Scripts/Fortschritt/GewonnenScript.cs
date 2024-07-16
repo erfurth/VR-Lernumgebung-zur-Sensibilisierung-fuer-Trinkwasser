@@ -21,6 +21,11 @@ public class GewonnenScript : MonoBehaviour
     public GameObject[] ObjekteVerstecken;
 
     public void GewinnStatusErreicht(){
-        
+        for (int i = 0; i < ObjekteZeigen.Length; i++) {
+            ObjekteZeigen[i].SetActive(true);
+        }
+        for (int i = 0; i < ObjekteVerstecken.Length; i++) {
+             ObjekteVerstecken[i].SetActive(false);
+        }
     }
 }
