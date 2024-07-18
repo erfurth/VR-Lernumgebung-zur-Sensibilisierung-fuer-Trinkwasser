@@ -76,6 +76,7 @@ public class InteractableScript : MonoBehaviour
 
     public void PlayAnimation() {
         if(this.HasAnimation) {
+            this.animator.ResetTrigger("Off");
             this.animator.SetTrigger("On");
             Debug.Log("Animation On", this.gameObject);
         }
@@ -83,6 +84,7 @@ public class InteractableScript : MonoBehaviour
 
     public void StopAnimation() {
         if(this.HasAnimation) {
+            this.animator.ResetTrigger("On");
             this.animator.SetTrigger("Off");
             Debug.Log("Animation Off", this.gameObject);
         }
