@@ -13963,7 +13963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ihre n\xE4chste Aufgabe f\xFCr das Forschungsprojekt sieht vor...\n\n...Trinkwasser
+  m_text: "Deine n\xE4chste Aufgabe f\xFCr das Forschungsprojekt sieht vor...\n\n...Trinkwasser
     herzustellen!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -20235,7 +20235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Einiges liegen von Ihren letzten Untersuchungen noch verstreut herum.\n\nSie
+  m_text: "Einiges liegen von Deinen letzten Untersuchungen noch verstreut herum.\n\nDu
     sollten alles zur\xFCck in den \nKreislauf setzen!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -41042,8 +41042,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Der Scanner wurde repariert.\n\nFalls Sie nicht mehr wissen, welches Element
-    wohin kommt, k\xF6nnen Sie den Scanner wie gewohnt benutzen."
+  m_text: "Der Scanner wurde repariert.\n\nFalls Du nicht mehr wei\xDFt, welches
+    Element wohin kommt, kannst Du den Scanner wie gewohnt benutzen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
