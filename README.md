@@ -1,6 +1,6 @@
 Dieses Projekt entstand im Kontext der Bachelorarbeit "Entwicklung einer spielbasierten Virtual-Reality-Lernumgebung zur Sensibilisierung für Trinkwasser"
 
-Es wurde ein Prototyp entwickelt zur sensibilisierung für Trinkwasser unter der Nutzung von VR und Gamification. Konkret wird der Wasserkreilauf auf spielerische Weise erklärt.
+Es wurde ein Prototyp entwickelt zur Sensibilisierung für Trinkwasser unter der Nutzung von VR und Gamification. Konkret wird der Wasserkreilauf auf spielerische Weise erklärt.
 
 Das Projekt entstand unter Verwendung von:
 - Unity Game Engine (LTS-Version 2022.3.5f1)
