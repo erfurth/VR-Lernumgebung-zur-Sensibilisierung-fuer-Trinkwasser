@@ -1,7 +1,6 @@
-# Entwicklung einer spielbasierten Virtual-Reality-Lernumgebung zur Sensibilisierung für Trinkwasser
+Dieses Projekt entstand im Kontext der Bachelorarbeit "Entwicklung einer spielbasierten Virtual-Reality-Lernumgebung zur Sensibilisierung für Trinkwasser"
 
-Dieses Unity-Projekt beinhaltet die Entwicklung eines Prototyps für eine Virtual-Reality-Lernumgebung (VRLE), die darauf abzielt, Schüler der Sekundarstufe I für das Thema Trinkwasser zu sensibilisieren. 
-Die VRLE nutzt spielerische Elemente und interaktive Aufgaben, um das Verständnis für den Wasserkreislauf zu fördern.
+Es wurde ein Prototyp entwickelt zur sensibilisierung für Trinkwasser unter der Nutzung von VR und Gamification. Konkret wird der Wasserkreilauf auf spielerische Weise erklärt.
 
 Das Projekt entstand unter Verwendung von:
 - Unity Game Engine (LTS-Version 2022.3.5f1)
