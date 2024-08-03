@@ -40,30 +40,30 @@ public class InteractableScript : MonoBehaviour
         this.HideAssociatedGameObjects();
     }
 
-    public void EnterSocket(SocketInteractibleAcceptorScript socketInteractible, SelectEnterEventArgs args) {
-        if (socketInteractible.gameObject == this.CorrectSocket) {
+    public void EnterSocket(SocketInteractableAcceptorScript socketInteractable, SelectEnterEventArgs args) {
+        if (socketInteractable.gameObject == this.CorrectSocket) {
             Debug.Log("Entered correct Socket", this.gameObject);
             this.isCorrectSocketed = true;
 
             this.PlayAnimation();
             this.ShowAssociatedGameObjects();
-            socketInteractible.HideSocket();
+            socketInteractable.HideSocket();
             PunktezaehlerScript.Instance.PunkteHochzaehlen();
         } else {
             Debug.Log("Wrong socket", this.gameObject);
         }
 
-        this.currentSocket = socketInteractible.gameObject;
+        this.currentSocket = socketInteractable.gameObject;
         this.currentSocket.GetComponent<SphereCollider>().enabled = false;
     }
 
-    public void ExitSocket(SocketInteractibleAcceptorScript socketInteractible, SelectExitEventArgs args) {
+    public void ExitSocket(SocketInteractableAcceptorScript socketInteractable, SelectExitEventArgs args) {
         Debug.Log("Left Socket", this.gameObject);
         bool wasInCorrectSocket = this.isCorrectSocketed;
         this.HideAssociatedGameObjects();
         this.StopAnimation();
         this.isCorrectSocketed = false;
-        socketInteractible.ShowSocket();
+        socketInteractable.ShowSocket();
         if (wasInCorrectSocket) {
         PunktezaehlerScript.Instance.PunkteRunterzaehlen();
         }
