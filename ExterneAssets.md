@@ -1,3 +1,6 @@
+Dieses Projekt verwendet Audio ("correct"/"incorrect") von Pixabay unter der CC0-Lizenz
+https://pixabay.com/de/sound-effects/
+
 Dieses Projekt verwendet Texturen unter Lizenz von Polyhaven
 https://polyhaven.com/
 Polyhaven
@@ -9,7 +12,7 @@ https://de.wikipedia.org/wiki/Datei:Blue_Marble_Next_Generation_%2B_topography_%
 Dieses Projekt verwendet Assets unter Lizenz von Quaternius
 Ultimate Modular Sci-Fi Pack
 https://quaternius.com/packs/ultimatemodularscifi.html
-© Quaternius
+Â© Quaternius
 
 Dieses Projekt verwendet weitere Assets unter Lizenz von CGTrader 
 Royalty Free No Ai License https://www.cgtrader.com/pages/terms-and-conditions
