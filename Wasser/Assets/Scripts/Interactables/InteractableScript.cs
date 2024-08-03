@@ -24,6 +24,8 @@ public class InteractableScript : MonoBehaviour
     private Animator animator;
 
     private GameObject currentSocket = null;
+	
+	public SoundManager soundManager;
 
     public void Start() {
         this.initialPosition = this.transform.position;
@@ -49,8 +51,12 @@ public class InteractableScript : MonoBehaviour
             this.ShowAssociatedGameObjects();
             socketInteractable.HideSocket();
             PunktezaehlerScript.Instance.PunkteHochzaehlen();
+			soundManager?.correctSound?.Play();
+			Debug.Log("Manager!!"+ (soundManager == null));
+			Debug.Log("Sound!!"+ (soundManager?.correctSound == null));
         } else {
             Debug.Log("Wrong socket", this.gameObject);
+			soundManager?.incorrectSound?.Play();
         }
 
         this.currentSocket = socketInteractable.gameObject;
@@ -71,7 +77,7 @@ public class InteractableScript : MonoBehaviour
 
         StartCoroutine("reactivateSocket");
     }
-
+	
     public void PlayAnimation() {
         if(this.HasAnimation) {
             this.animator.ResetTrigger("Off");
