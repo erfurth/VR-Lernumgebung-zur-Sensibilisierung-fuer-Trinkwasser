@@ -1,5 +1,8 @@
-Die Daten wurden mit Hilfe einer Umfrage erhoben.
+Die Daten wurden mit Hilfe einer Umfrage erhoben. Die Umfrage wurde mit https://limesurvey.net/ erstellt.
 Die Umfrage besteht aus dem UEQ (https://www.ueq-online.org/) und weiteren offenen Fragen.
+
+Die Umfrage-Struktur *limesurvey_umfrage-struktur.lss*
+Abbildung der Umfrage *limesurvey_umfrage_de.png* und *limesurvey_umfrage_de.html*
 
 Mithilfe des Analyse-Excels von dem UEQ-Team wurden die UEQ Daten ausgewertet.
 
